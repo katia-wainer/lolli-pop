@@ -1,0 +1,629 @@
+//variables
+$main-color: #faf9f6;
+$secondary-color:rgb(234,233,224);
+$light-color: #fffcfc;
+$dark-color: #333;
+$red:#A51D43;
+$green:#7e9638;
+$blue:rgb(34, 79, 97);
+
+
+@font-face {
+  font-family: 'robinson';
+  src: url(/robinson-regular-trial-webfont.woff);
+}
+@font-face{
+  font-family: 'robinson-light';
+  src: url(/Robinson-Light-Trial.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.6;
+    color:$dark-color;
+    background:$main-color; 
+    overflow-x: hidden; 
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+// logo
+#logo {
+  width: 70px;
+  height: 70px;
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+// grid hero section
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 100px;
+  padding: 100px;
+  .work{
+    color: $blue;
+  }
+  .scope{
+    background:rgba($green,0.8);
+    padding: 8px;
+    
+    
+   }
+  
+}
+// text mixin
+@mixin text {
+    letter-spacing: 1px;
+    color: $blue;
+    line-height: 1.9;
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 40px;
+  }
+  @mixin heading {
+    font-size: 6rem;
+    letter-spacing: 7px;
+    font-family:'robinson-light';
+    font-weight: 50px; 
+    color:$blue;
+  }
+  @mixin text-heading{
+    font-size: 2rem;
+    font-family:'Work Sans', sans-serif;
+    font-weight: 700;
+  }
+  .heading{
+    @include heading;
+
+  }
+  .subtiltle{
+    @include text-heading;
+    padding: 20px;
+    position: absolute;
+    top:350px;
+    left: 85px;
+    color: $blue;
+  }
+
+  .my-work .work{
+    margin-top: 100px;
+  
+    p{
+      padding: 10px;
+    }
+  }
+  .about{
+  @include text;
+   margin-top: 50px;
+   
+  }
+
+.goal{
+  @include text-heading;
+  font-size: 1.2rem;
+  
+}
+.philosophy{
+  @include text-heading;
+  font-size: 2rem;
+  font-family: 'robinson-light';
+  letter-spacing: 2px;
+  
+}
+.brand-goal{
+  position: absolute;
+  top:1200px;
+  left:470px;
+  color: $green;
+
+  p{
+    font-size: 1.2rem;
+    line-height: 1.7;
+    text-align: center;
+    color: $blue;
+    
+  }
+}
+.line-2{
+  border: 0.1mm solid $blue;
+    opacity: 0.5;
+    margin:15px;
+    margin-left:380px;
+    width: 950px;
+    position: absolute;
+    top: 1400px;
+}
+
+
+.about p{
+  padding: 5px;
+  
+}
+
+
+//lines
+
+  .line{
+    border: 0.1mm solid $blue;
+    opacity: 0.5;
+    margin:15px;
+    margin-left:-1px;
+    width: 745px;
+    
+  }
+  
+//challenge section
+.container-challenge{
+  @include text;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 150px;
+  position: relative;
+  padding: 50px;
+  margin-top: 50px;
+  
+
+}
+.challenge > h2{
+  margin-left: 125px;
+  margin-top: -10px;
+  
+}
+
+
+.challenge >p{
+  margin-left: 125px;
+  
+}
+
+
+.solution > p{
+  margin-left: 70px;
+  margin-top: -10px;
+  
+}
+
+
+.bold{
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+  .heading-2{
+    @include heading;
+    font-size:2.5rem;
+    padding: 35px;
+    margin-left: 80px;
+    color: $green;
+  }
+ .solution > h1{
+  margin-left: 30px;
+ }
+
+
+.box{
+  background: $secondary-color;
+  height: 100vh;
+  width: 100vw;
+}
+
+#anim{
+ margin:auto;
+  width: 1500px;
+
+}
+
+#anim-2{
+  width: 1100px;
+  height: 1100px;
+  margin-left: -100px;
+  margin-top: 100px;
+  
+}
+
+.sketch{
+  width: 500px;
+  position: relative;
+ 
+  img{
+    position: absolute;
+    top:-750px;
+    left: 1035px;
+  }
+}
+.container-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.strategy p{
+  @include text;
+  margin-right: 150px;
+  margin-top: -40px;
+  
+}
+
+.strategy > .heading-2{
+  margin-left: 5px;
+  margin-top: 300px;
+  margin-bottom: -25px;
+
+}
+
+.strategy{
+  margin-top: 200px;
+}
+// place holde for mockup
+.place-holder1{
+  height: 100vh;
+  width: 100vw;   
+  background-image: url('/dist/img/לוגו\ התחלה\ קייס\ סטאדי3.png');
+  background-size:contain;
+  background-size:1720px;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+  .place-holder2{
+  margin-top: 100px;
+  // background: #EAE9E0;
+  height: 100vh;
+  width: 100vw;   
+  background-size:contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  img{
+    width: 1710px;
+    z-index: 1;
+    margin: auto;
+  }
+  }
+
+  .place-holder4{
+   position: relative;
+
+   img{
+    position: absolute;
+    top:130px;
+   }
+  }
+
+// dots on the slider area
+.dots{
+  position: relative;
+  margin-left:-10px ;
+
+  .dot-1{
+    width: 25px;
+    height: 25px;
+    z-index: 4;
+    border-radius: 50%;
+    background-color:$red ;
+    position: absolute;
+    top:-515px;
+    left: 1150px;
+    animation:animated-dots;
+    animation-duration: 3S;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+  }
+
+ @keyframes animated-dots {
+  from{opacity: 0%;}
+  to{opacity: 100%;}
+ }
+  .dot-2{
+    width: 25px;
+    height: 25px;
+    z-index: 4;
+    border-radius: 50%;
+    background-color:$red ;
+    position: absolute;
+    top:-570px;
+    left: 1200px;
+    animation:animated-dots;
+    animation-duration: 3S;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-timing-function: ease-out;
+  }
+  .dot-3{
+    width: 25px;
+    height: 25px;
+    z-index: 4;
+    border-radius: 50%;
+    background-color:$red ;
+    position: absolute;
+    top:-595px;
+    left: 1272px;
+    animation:animated-dots;
+    animation-duration: 3S;
+    animation-iteration-count: infinite;
+    animation-delay: 3s;
+    animation-timing-function: ease-out;
+  }
+  .dot-4{
+    width: 25px;
+    height: 25px;
+    z-index: 4;
+    border-radius: 50%;
+    background-color:$red ;
+    position: absolute;
+    top:-592px;
+    left: 1353px;
+    animation:animated-dots;
+    animation-duration: 3S;
+    animation-iteration-count: infinite;
+    animation-delay: 1.5s;
+    animation-timing-function: ease-out;
+  }
+  .dot-5{
+    width: 25px;
+    height: 25px;
+    z-index: 4;
+    border-radius: 50%;
+    background-color:$red ;
+    position: absolute;
+    top:-565px;
+    left: 1430px;
+    animation:animated-dots;
+    animation-duration: 3S;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-timing-function: ease-out;
+  }
+  .dot-6{
+    width: 25px;
+    height: 25px;
+    z-index: 4;
+    border-radius: 50%;
+    background-color:$red ;
+    position: absolute;
+    top:-510px;
+    left: 1485px;
+    animation:animated-dots;
+    animation-duration: 3S;
+    animation-iteration-count: infinite;
+    animation-delay: 3.5s;
+    animation-timing-function: ease-out;
+    
+  }
+}
+
+  
+  // text animation
+
+   .loader-1,
+   .loader-2,
+   .loader-3,
+   .loader-4,
+   .loader-5,
+   .loader-6{
+    position: relative;
+    font-size: 0.8rem;
+    color: $blue;
+    
+  }
+  // positions
+  .position-1{
+    position: absolute;
+    top:400px;
+    left: 520px;
+    z-index: 1;
+  }
+  .position-2{
+    position: absolute;
+    z-index: 1;
+    left:130px;
+    top:520px;
+  }
+  .position-3{
+    position: absolute;
+    z-index: 1;
+    top:680px;
+    left:510px;
+  }
+  .position-4{
+    position: absolute;
+    z-index: 1;
+    top:715px;
+    left:510px ;
+  }
+  .position-5{
+    position: absolute;
+    z-index: 1;
+    top:715px;
+    left: 60px;
+  }
+
+  .position-6{
+    position: absolute;
+    z-index: 1;
+    top:890px;
+    left: 270px;
+  }
+
+
+
+  .loader-1 span,
+  .loader-2 span,
+  .loader-3 span,
+  .loader-4 span,
+  .loader-5 span,
+  .loader-6 span{
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+    animation-play-state: paused;
+  }
+  .loader-1:hover span,
+  .loader-2:hover span,
+  .loader-3:hover span,
+  .loader-4:hover span,
+  .loader-4:hover span,
+  .loader-5:hover span,
+  .loader-6:hover span{
+    animation-play-state: running;
+  }
+    @keyframes animate
+    {
+      0%,40%,100%{
+        transform: translateY(0);
+      }
+      20%{
+        transform: translateY(-50px);
+      }
+    }
+    // straberry animation
+    .strawberry-container{
+      position:relative;
+    }
+
+    .sky{
+      margin-top: -390px;
+      margin-left: 50px;
+    }
+.strawberry{
+  z-index: 1;
+  position: absolute;
+  top: -460px;
+  left:-180px;
+  width: 1200px;
+}
+  //  logo section text
+  .logo-text{
+    margin-left: 570px;
+    color: $green;
+    margin-top: 100px;
+    font-family:'robinson-light';
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+  }
+  .logo-p{
+    @include text;
+    max-width: 500px;
+    margin-left: 1100px;
+  }
+
+ .img-3 >img{
+  width: 909px;
+  margin-left: 50px;
+  margin-top: 130px;
+
+ }
+.position{
+  .img-3{
+    width: 100px;
+    top:100px;
+    left: 1000px;
+  }
+
+
+
+.box-color{
+  width: 2000px;
+  height: 810px;
+  position: absolute;
+  top: 106px;
+  background: #eae9e0;
+  
+}
+position: relative;
+
+
+.visual-len{
+  position: relative;
+ 
+
+
+  h1{
+    position: absolute;
+    right: 130px;
+    top: -630px;
+   }
+   p{
+    @include text;
+    position: absolute;
+    width:500px;
+    right: 100px;
+    top:-530px;
+   }
+   
+}
+
+}
+
+.image-5{
+ position: relative;
+
+ img{
+  width:1720px;
+  position: absolute;
+  top: 1540px;
+  left: -4px;
+ }
+}
+
+.image-7{
+  position: relative;
+   img {
+    position: absolute;
+    top:2690px;
+}
+}
+// text anim 
+.text-anim{
+  position: relative;
+  top: 2530px;
+  left:365px;
+  font-size: 5rem;
+  color: $green;
+  text-shadow: 0 0 10px $green;
+  letter-spacing: 3px;
+  
+}
+
+.text-anim::after{
+  content: '|';
+  position: absolute;
+  color: transparent;
+  background:#faf9f6;
+  right: 720px;
+  width: 1000px;
+  animation: typing 4s linear alternate infinite,
+  line 1s infinite;
+}
+@keyframes typing {
+  to{
+    width: 0%
+  }
+}
+@keyframes line {
+  0%{
+    color: transparent;
+  }
+  
+}
+
+
+// media queries
+@import 'media';
+ 
+ 
